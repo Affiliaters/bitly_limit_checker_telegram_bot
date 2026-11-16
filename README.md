@@ -92,7 +92,7 @@ Open [@BotFather](https://t.me/BotFather) in Telegram, send `/newbot` and copy t
 Send `/start` to your bot. Done ✅
 
 ### Optional settings (visible, edit any time)
-These are created as plain text set to `none` (off). Change them in Worker → **Settings → Variables and Secrets** → edit → **Deploy**:
+These are **not shown on the deploy form**. They are created automatically as plain text set to `none` (off), so the bot works without them. To turn one on, go to Worker → **Settings → Variables and Secrets** → edit → **Deploy**:
 
 | Setting               | What to enter                                                                      |
 |-----------------------|------------------------------------------------------------------------------------|
