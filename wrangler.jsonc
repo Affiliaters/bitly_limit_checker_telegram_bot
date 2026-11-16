@@ -1,0 +1,7 @@
+{
+  "name": "bitly-limit-checker",
+  "main": "src/index.js",
+  "compatibility_date": "2025-01-01"
+  // Optional: to make users join your channel first, add CHANNEL_ID
+  // (and optionally CHANNEL_LINK) in Worker → Settings → Variables and Secrets.
+}

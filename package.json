@@ -1,0 +1,32 @@
+{
+  "name": "bitly-limit-checker",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  },
+  "cloudflare": {
+    "bindings": {
+      "BOT_TOKEN": {
+        "description": "Your Telegram bot token from [@BotFather](https://t.me/BotFather)."
+      },
+      "WEBHOOK_SECRET": {
+        "description": "Any random word (letters, numbers, `_` and `-` only). Blocks fake requests to your bot. Recommended. `none` to skip."
+      },
+      "CHANNEL_ID": {
+        "description": "Optional. Channel users must join first, e.g. `@mychannel`. Add your bot as **admin** there. `none` to skip."
+      },
+      "CHANNEL_LINK": {
+        "description": "Optional. Join link, e.g. `https://t.me/mychannel`. `none` to build it from `CHANNEL_ID`."
+      },
+      "CHANNEL_BUTTON_TEXT": {
+        "description": "Optional. Join button label, e.g. `✨ Join My Channel`. `none` for default."
+      },
+      "WELCOME_EXTRA": {
+        "description": "Optional. Extra text under the /start message. Telegram HTML allowed, `\\n` for new line. `none` to skip."
+      }
+    }
+  }
+}

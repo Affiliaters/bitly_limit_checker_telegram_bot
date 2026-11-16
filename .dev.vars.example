@@ -1,0 +1,9 @@
+# Required
+BOT_TOKEN=123456789:your-telegram-bot-token
+
+# Optional — set to "none" (or leave blank) to turn off
+WEBHOOK_SECRET=none
+CHANNEL_ID=none
+CHANNEL_LINK=none
+CHANNEL_BUTTON_TEXT=none
+WELCOME_EXTRA=none
