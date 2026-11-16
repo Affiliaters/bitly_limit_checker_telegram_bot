@@ -1,7 +1,17 @@
 {
   "name": "bitly-limit-checker",
   "main": "src/index.js",
-  "compatibility_date": "2025-01-01"
-  // Optional: to make users join your channel first, add CHANNEL_ID
-  // (and optionally CHANNEL_LINK) in Worker → Settings → Variables and Secrets.
+  "compatibility_date": "2025-01-01",
+
+  // Keep values you edit in the Cloudflare dashboard when the Worker is redeployed
+  "keep_vars": true,
+
+  // Plain (visible) settings. Change them later in
+  // Worker → Settings → Variables and Secrets. "none" = turned off.
+  "vars": {
+    "CHANNEL_ID": "none",
+    "CHANNEL_LINK": "none",
+    "CHANNEL_BUTTON_TEXT": "none",
+    "WELCOME_EXTRA": "none"
+  }
 }

@@ -75,16 +75,12 @@ Open [@BotFather](https://t.me/BotFather) in Telegram, send `/newbot` and copy t
 
 ### After you click
 1. Log in to Cloudflare and connect your GitHub account when asked.
-2. Fill in the settings (type `none` for any optional one you don't want):
+2. Fill in the two secrets (hidden):
 
-   | Setting               | Required? | What to enter                                                         |
-   |-----------------------|-----------|-----------------------------------------------------------------------|
-   | `BOT_TOKEN`           | ✅ Yes    | Your bot token                                                        |
-   | `WEBHOOK_SECRET`      | Recommended | Any random word, e.g. `mySecret123`                                 |
-   | `CHANNEL_ID`          | Optional  | Channel users must join first, e.g. `@mychannel` (add your bot as **Admin** there) |
-   | `CHANNEL_LINK`        | Optional  | Join link, e.g. `https://t.me/mychannel` (`none` = built from `CHANNEL_ID`) |
-   | `CHANNEL_BUTTON_TEXT` | Optional  | Join button label, e.g. `✨ Join My Channel`                          |
-   | `WELCOME_EXTRA`       | Optional  | Extra text under the `/start` message (see below)                     |
+   | Secret           | Required?   | What to enter                                   |
+   |------------------|-------------|-------------------------------------------------|
+   | `BOT_TOKEN`      | ✅ Yes      | Your bot token                                  |
+   | `WEBHOOK_SECRET` | Recommended | Any random word, e.g. `mySecret123` (`none` to skip) |
 
 3. Click **Deploy**.
 4. Open this link in your browser (use your own Worker URL):
@@ -95,7 +91,17 @@ Open [@BotFather](https://t.me/BotFather) in Telegram, send `/newbot` and copy t
 
 Send `/start` to your bot. Done ✅
 
-To change a setting later: Worker → **Settings → Variables and Secrets**. If you change `WEBHOOK_SECRET`, open `/setup` again.
+### Optional settings (visible, edit any time)
+These are created as plain text set to `none` (off). Change them in Worker → **Settings → Variables and Secrets** → edit → **Deploy**:
+
+| Setting               | What to enter                                                                      |
+|-----------------------|------------------------------------------------------------------------------------|
+| `CHANNEL_ID`          | Channel users must join first, e.g. `@mychannel` (add your bot as **Admin** there) |
+| `CHANNEL_LINK`        | Join link, e.g. `https://t.me/mychannel` (`none` = built from `CHANNEL_ID`)        |
+| `CHANNEL_BUTTON_TEXT` | Join button label, e.g. `✨ Join My Channel`                                       |
+| `WELCOME_EXTRA`       | Extra text under the `/start` message (see below)                                  |
+
+If you change `WEBHOOK_SECRET`, open `/setup` again.
 
 ### `WELCOME_EXTRA` format
 Telegram HTML (`<b>`, `<i>`, `<a href="...">`), with `\n` for a new line. Example:
