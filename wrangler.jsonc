@@ -3,6 +3,11 @@
   "main": "src/index.js",
   "compatibility_date": "2025-01-01",
 
+  // Public *.workers.dev URL (needed for the Telegram webhook)
+  "workers_dev": true,
+  // No preview URLs, so /setup can't point the webhook at a non-live version
+  "preview_urls": false,
+
   // Keep values you edit in the Cloudflare dashboard when the Worker is redeployed
   "keep_vars": true,
 
