@@ -62,7 +62,7 @@ Send your Bitly token to the bot and it replies with:
 
 ## ℹ️ How the bot behaves
 - Works in private chats only; it ignores groups and channels.
-- Each user can send up to 10 messages per minute.
+- Basic anti-spam: about 10 messages per minute per user. It's best-effort: the count is kept in memory and resets when Cloudflare restarts the Worker.
 
 ---
 
@@ -92,7 +92,7 @@ Open [@BotFather](https://t.me/BotFather) in Telegram, send `/newbot` and copy t
 Send `/start` to your bot. Done ✅
 
 ### Optional settings (visible, edit any time)
-These are **not shown on the deploy form**. They are created automatically as plain text set to `none` (off), so the bot works without them. To turn one on, go to Worker → **Settings → Variables and Secrets** → edit → **Deploy**:
+These are **not shown on the deploy form**. Their default is `none` (off) in [`wrangler.jsonc`](wrangler.jsonc), and the bot works without them. To turn one on, go to Worker → **Settings → Variables and Secrets**, click the edit (✏️) icon next to it, and save. If a setting is missing there, click **Add variable** and add it as a plain-text variable:
 
 | Setting               | What to enter                                                                      |
 |-----------------------|------------------------------------------------------------------------------------|
